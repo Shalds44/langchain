@@ -30,7 +30,7 @@ def hello():
         print("----")
 
     for chunk in agent_executor.stream(
-        {"messages": [HumanMessage(content="quel age à Messi ? Le joueur de foot")]}, config
+        {"messages": [HumanMessage(content="l'âge de Messi ? ")]}, config
     ):
         print(chunk)
         print("----")
