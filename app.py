@@ -11,7 +11,7 @@ from qdrant_client import QdrantClient
 from qdrant_client.http.models import Distance, VectorParams
 from langchain.tools.retriever import create_retriever_tool
 from langgraph.prebuilt import create_react_agent
-from state import AgentState
+from agent_state import AgentState
 from dotenv import load_dotenv
 import qdrant_client
 import os
@@ -54,9 +54,9 @@ def claude():
 def rag():
     embeddings = OpenAIEmbeddings(model="text-embedding-3-large")
 
-    url = "https://c5a5059f-5a66-4dc4-a644-54f96c845264.europe-west3-0.gcp.cloud.qdrant.io"
-    api_key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2Nlc3MiOiJtIiwiZXhwIjoxNzQ3MTQ2NTU3fQ.inS5v4jUgEOdb20avcUMh3EnUC2NnBtpKCCajZm6z-o"
-    collection_name = "my_documents"
+    # url = "https://c5a5059f-5a66-4dc4-a644-54f96c845264.europe-west3-0.gcp.cloud.qdrant.io"
+    # api_key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2Nlc3MiOiJtIiwiZXhwIjoxNzQ3MTUzNTE4fQ.wxvYsEuU_llKYGNDWxJL5V7UwGNlYGmZr6_GGJ1nDb4"
+    # collection_name = "my_documents"
     
     qdrant = qdrant_client.QdrantClient(url=url, api_key=api_key, prefer_grpc=True)
     
