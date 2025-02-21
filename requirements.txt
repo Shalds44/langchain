@@ -1,0 +1,10 @@
+Flask
+langchain-anthropic
+langchain-community
+langchain-core
+langgraph
+langchain-openai
+langchain-text-splitters
+langchain-qdrant
+qdrant-client
+python-dotenv
